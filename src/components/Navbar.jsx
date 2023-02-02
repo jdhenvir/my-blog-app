@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   MDBContainer,
   MDBNavbar,
@@ -8,11 +9,6 @@ import {
   MDBNavbarNav,
   MDBNavbarItem,
   MDBNavbarLink,
-  MDBBtn,
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
   MDBCollapse,
 } from 'mdb-react-ui-kit';
 
@@ -36,16 +32,20 @@ export default function Navbar() {
         <MDBCollapse navbar show={showBasic}>
 
           <MDBNavbarNav right fullWidth={false} className='mb-2 mb-lg-0'>
+            <Link to="/">
+              <MDBNavbarItem>
+                <MDBNavbarLink>
+                    Home
+                </MDBNavbarLink>
+              </MDBNavbarItem>
+            </Link>
+            <Link to="/profile">
             <MDBNavbarItem>
-              <MDBNavbarLink href='/'>
-                Home
-              </MDBNavbarLink>
-            </MDBNavbarItem>
-            <MDBNavbarItem>
-              <MDBNavbarLink href='/about'>
+              <MDBNavbarLink>
                 Profile
               </MDBNavbarLink>
             </MDBNavbarItem>
+            </Link>
             <MDBNavbarItem>
               <MDBNavbarLink href='/projects'>
                 Projects

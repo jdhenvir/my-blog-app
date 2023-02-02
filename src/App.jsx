@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home name="James Dhenvir" profession="FullStack React Developer"/>} />
-          <Route path="/about" element={<Profile name="James Dhenvir" address="Iligan City" profession="FullStack React Developer"/>} />
+          <Route path="/profile" element={<Profile name="James Dhenvir" address="Iligan City" profession="FullStack React Developer"/>} />
         </Route>
         <Route path='*' element={<Error404 />} />
       </Routes>
